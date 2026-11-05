@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chaos Chords — First Instrument</title>
+  <meta name="description" content="A playable stone chord instrument with octave mutations.">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="music.js"></script>
+  <script defer src="audio.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header class="intro"><span>CHAOS CHORDS · PROTOTYPE 01</span><p>Hold a stone. Shape its sound.</p></header>
+    <div class="instrument-scroll">
+      <section class="instrument" aria-label="Chaos Chords stone instrument">
+        <img class="tablet" src="design/chaos-chords-spread-lock-v3.png" alt="Violet stone tablet with a puzzle amulet, seven carved pads and three bronze combination wheels" draggable="false">
+        <div class="preset-info" tabindex="0" aria-label="Preset fixed at C major triads for this prototype"><span>C major · triads</span><small>Preset puzzle · coming later</small></div>
+        <div id="pads"></div>
+        <button id="spread" class="spread-toggle" aria-pressed="false" aria-label="Enable Spread"><span>SPREAD</span><small id="spread-state">OFF</small></button>
+        <div id="wheels"></div>
+        <div class="borrow-info" tabindex="0" aria-label="Borrow is not available in this prototype"><small>COMING LATER</small></div>
+      </section>
+    </div>
+    <section class="console" aria-label="Instrument controls and explanation">
+      <div class="toolbar"><button id="start">Enable sound</button><label class="volume">Volume <input id="volume" type="range" min="0" max="70" value="35" aria-label="Volume"></label><button id="stop">Stop all sound <kbd>Esc</kbd></button></div>
+      <p id="status" role="status">Enable sound, then hold a pad or keyboard key 1–7.</p>
+      <div class="readout"><div><span>ORIGINAL CHORD</span><strong id="original">—</strong></div><div><span>PLAYED NOTES</span><strong id="output">—</strong></div></div>
+      <p id="explanation">Spread moves each original chord note by whole octaves. Turn a wheel, or focus it and use ↑ / ↓.</p>
+      <p class="hint">One chord at a time · release to stop · settings apply to the next chord<br>Preset fixed at C major triads · preset puzzle and Borrow coming later</p>
+    </section>
+  </main>
+</body>
+</html>
